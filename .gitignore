@@ -1,0 +1,19 @@
+# Node / Angular
+node_modules/
+dist/
+.angular/
+
+# Backend
+backend/node_modules/
+backend/dist/
+backend/.env
+
+# Frontend
+portafolio-proyecto/node_modules/
+portafolio-proyecto/dist/
+portafolio-proyecto/.angular/
+
+# IDE / OS
+.vscode/
+.DS_Store
+Thumbs.db
