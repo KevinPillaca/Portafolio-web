@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "home": {
+    "greeting": "HOLA",
+    "iam": "Soy Kevin.",
+    "role": "Desarrollador Full-Stack Junior",
+    "btnProject": "Tengo un Proyecto",
+    "btnCV": "Mi Curriculum"
+  },
+  "about": {
+    "title": "Acerca de mí",
+    "p1": "Hola 👋, soy Kevin Pillaca, apasionado por la tecnología y con formación en <span>Ingeniería de Computación y Sistemas</span>. Mi camino comenzó en el mundo del diseño gráfico y el soporte técnico, donde descubrí lo mucho que disfrutaba crear soluciones prácticas y aportar valor a problemas reales.",
+    "p2": "Con el tiempo, el diseño gráfico despertó mi interés por el <span>diseño de interfaces</span>, así que comencé a crear prototipos en Figma, entendiendo cada vez mejor la importancia de la experiencia del usuario en un proyecto.",
+    "p3": "A partir de ahí, decidí avanzar y meterme de lleno en el <span>desarrollo web</span>. Inicié con <span>HTML, CSS y JavaScript</span>, y desde entonces he desarrollado sitios reales para clientes, lo que fortaleció mi experiencia y me motivó a seguir creciendo cada vez más.",
+    "p4": "Ese proceso me impulsó a especializarme como <span>Full Stack Developer</span>, trabajando hoy con <span>Angular, Node.js, Express, TypeScript y MySQL</span>, desarrollando <span>APIs REST</span> para la comunicación entre <span>frontend</span> y <span>backend</span>, siempre con el objetivo de crear soluciones útiles y bien estructuradas 🚀.",
+    "p5": "Cuando no estoy programando, disfruto del deporte, el fútbol ⚽ y pasar tiempo en familia, que es mi mayor motivación. Estoy listo para seguir creciendo profesionalmente, asumir nuevos retos y construir cosas increibles con código☕",
+    "question": "¿Hablamos de código y construimos algo increíble?",
+    "skills": "Skills",
+    "frontend": "Tecnologías / Frontend",
+    "backend": "Tecnologías / Backend",
+    "tools": "Otras herramientas..."
+  },
+    "projects": {
+    "title": "Proyectos",
+    "description": "Explora aquí algunas soluciones que he realizado recientemente.",
+    "webTitle": "Sitio Web",
+    "webDesc": "Página web desarrollada para una imprenta gráfica, enfocada en presentar sus servicios de impresión de forma clara y visualmente atractiva. Facilita el contacto directo con los clientes y fortalece la presencia digital del negocio de forma profesional.",
+    "appTitle": "Gestión Imprenta",
+    "inProgress": "(en desarrollo - 60%)",
+    "appDesc": "Aplicación web para solucionar la gestión manual de una imprenta gráfica, digitalizando el registro de clientes, cobranzas, productos y cotizaciones. La plataforma permite un mejor control del negocio mediante un sistema con login, base de datos y acceso centralizado desde la web.",
+    "portfolioTitle": "Portafolio Web",
+    "portfolioDesc": "Portafolio web personal desarrollado con Angular y TypeScript, con animaciones en GSAP y aplicación práctica de mis conocimientos en desarrollo web moderno, buenas prácticas de diseño y experiencia de usuario.",
+    "comingSoon": "Más proyectos próximamente..."
+    },
+    "contact": {
+      "title": "Contacto",
+      "name": "Nombre...",
+      "email": "Correo...",
+      "message": "Mensaje...",
+      "btn": "Enviar mensaje",
+
+      "errorName": "El nombre es obligatorio",
+      "errorEmail": "Ingresa un correo válido",
+      "errorMessage": "El mensaje es obligatorio",
+
+      "navHome": "Inicio",
+      "navAbout": "Acerca de",
+      "navProjects": "Proyectos",
+      "navContact": "Contacto",
+
+      "footer": "Desarrollador Web"
+    }
+}

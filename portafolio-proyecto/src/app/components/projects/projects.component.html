@@ -1,0 +1,69 @@
+<div id="projects" class="proyect">
+    <svg class="wave wave-top" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40C120,20 240,60 360,40C480,20 600,60 720,40C840,20 960,60 1080,40C1200,20 1320,60 1440,40L1440,0 L0,0 Z"></path>
+    </svg>
+
+    <h2 class="titulo-proyectos">{{ langService.translate('projects.title') }}</h2>
+    <p class="descripcion-proyectos">
+        {{ langService.translate('projects.description') }}
+    </p>
+
+    <div class="contenedor-principal">
+        <div class="tarjeta">
+            <h2>{{ langService.translate('projects.webTitle') }}</h2>
+            <img src="images/proyectos/dig_web.jpg" class="img" alt="foto sitio web">
+            <p>{{ langService.translate('projects.webDesc') }}</p>
+            <div class="tecno"> <h3>HTLM</h3> <h3>CSS</h3> <h3>JAVASCRIPT</h3> <h3>GSAP</h3></div>
+            <div class="botones">
+                <a href="#" class="boton-gris">
+                    <img src="/icons/hub_2.svg" alt="" class="icono"> Code</a>
+                <a href="#" class="boton-verde">
+                    <img src="/icons/demo.svg" alt="" class="icono"> Demo</a>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <h2>{{ langService.translate('projects.appTitle') }}</h2>
+            <span>{{ langService.translate('projects.inProgress') }}</span>
+            <img src="images/proyectos/aplicacion_web.jpg" class="img click" alt="foto Aplicación Web" (click)="abrirImagen('images/proyectos/aplicacion_web.jpg')">
+            <p>{{ langService.translate('projects.appDesc') }}</p>
+            <div class="tecno"> <h3>ANGULAR</h3> <h3>NODE</h3> <h3>EXPRESS</h3> <h3>TYPESCRIPT</h3><h3>MYSQL</h3></div>
+            <div class="botones">
+                <a href="#" class="boton-gris">
+                    <img src="/icons/hub_2.svg" alt="" class="icono"> Code</a>
+                <a href="#" class="boton-verde">
+                    <img src="/icons/demo.svg" alt="" class="icono">Demo</a>
+            </div>
+        </div>
+
+        <div class="tarjeta">
+            <h2>{{ langService.translate('projects.portfolioTitle') }}</h2>
+            <img src="images/proyectos/portafolio.jpg" class="img" alt="foto Aplicación Web">
+            <p>{{ langService.translate('projects.portfolioDesc') }}</p>
+            <div class="tecno"> <h3>ANGULAR</h3> <h3>TYPESCRIPT</h3> <h3>GSAP</h3></div>
+            <div class="botones">
+                <a href="#" class="boton-gris"> 
+                    <img src="/icons/hub_2.svg" alt="" class="icono">Code</a>
+                <a href="#" class="boton-verde">
+                    <img src="/icons/demo.svg" alt="" class="icono">Demo</a>
+            </div>
+        </div>
+
+        <div class="tarjeta proxima">
+            <h3> {{ langService.translate('projects.comingSoon') }}</h3>
+        </div>
+    </div>
+    <svg class="wave wave-bottom" viewBox="0 0 1440 80" preserveAspectRatio="none">
+         <path d="M0,40C120,20 240,60 360,40C480,20 600,60 720,40C840,20 960,60 1080,40C1200,20 1320,60 1440,40L1440,80 L0,80 Z"></path>
+    </svg>
+</div>
+
+@if (imagenActiva) {
+  <div class="modal-img" (click)="cerrarImagen()">
+    <img
+      [src]="imagenActiva"
+      class="modal-img-contenido"
+      (click)="$event.stopPropagation()"
+    />
+  </div>
+}

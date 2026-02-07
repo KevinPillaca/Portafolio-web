@@ -1,0 +1,66 @@
+<div id="contact" class="contacto"> 
+  <section class="formulario">
+    <h1>{{ langService.translate('contact.title') }}</h1>
+
+    <form [formGroup]="contactoForm" (ngSubmit)="enviar()">
+
+      <!-- NOMBRE -->
+      <div class="field">
+        <input type="text" formControlName="nombre" [placeholder]="langService.translate('contact.name')" />
+        <br>
+        <small *ngIf="contactoForm.get('nombre')?.touched && contactoForm.get('nombre')?.invalid">
+          {{ langService.translate('contact.errorName') }}
+        </small>
+      </div>
+
+      <!-- CORREO -->
+      <div class="field">
+        <input type="email" formControlName="correo" [placeholder]="langService.translate('contact.email')" />
+        <br>
+        <small *ngIf="contactoForm.get('correo')?.touched && contactoForm.get('correo')?.invalid">
+          {{ langService.translate('contact.errorEmail') }}
+        </small>
+      </div>
+
+      <!-- MENSAJE -->
+      <div class="field">
+        <textarea rows="4" formControlName="mensaje" [placeholder]="langService.translate('contact.message')"></textarea>
+        <br>
+        <small *ngIf="contactoForm.get('mensaje')?.touched && contactoForm.get('mensaje')?.invalid">
+          {{ langService.translate('contact.errorMessage') }}
+        </small>
+      </div>
+
+      <!-- BOTÓN -->
+      <button type="submit" [disabled]="contactoForm.invalid">
+        {{ langService.translate('contact.btn') }}
+      </button>
+    </form>
+
+    <!-- MENSAJE BACKEND -->
+    <p class="success" *ngIf="enviado">
+      {{ mensaje }}
+    </p>
+
+    <p class="error" *ngIf="error">
+      {{ error }}
+    </p>
+  </section>
+  <section class="redes">
+    <a href=""><img src="/icons/correo.svg" alt=""> </a> 
+    <a href=""><img src="/icons/linkedin.svg" alt=""></a>
+    <a href=""><img src="/icons/github.svg" alt=""></a>
+  </section>
+  <nav>
+    <ul class="navbar-links">
+    <li><a href="/">{{ langService.translate('contact.navHome') }}</a></li>
+    <li><a [routerLink]="[]" fragment="acerca">{{ langService.translate('contact.navAbout') }}</a></li>
+    <li><a [routerLink]="[]" fragment="projects">{{ langService.translate('contact.navProjects') }}</a></li>
+    <li><a [routerLink]="[]" fragment="contact">{{ langService.translate('contact.navContact') }}</a></li>
+  </ul>
+  </nav>
+  
+  <footer>
+    <h1>© 2026   Kevin Pillaca - {{ langService.translate('contact.footer') }} 💻</h1>
+  </footer>
+</div>

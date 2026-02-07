@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Jersey+25&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;500;700&display=swap');
+body {
+  font-family: 'Alexandria', sans-serif;
+  font-weight: 200; 
+  font-family: "Jersey 25", sans-serif;
+}
+
+*{
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.descripcion p span {
+  color: #27FF9A;
+}
+.descripcion p.pregunta {
+  color: #FFD062;
+}

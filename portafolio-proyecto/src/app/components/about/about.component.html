@@ -1,0 +1,97 @@
+<div id="acerca" class="acercademi">
+    <h1> {{ langService.translate('about.title') }}</h1>
+    <div class="img_des">
+        <section class="imagen">
+            <img src="images/foto_jugador.jpg" alt="imagen mia" />
+        </section>
+        <section class="descripcion">
+            <p [innerHTML]="safeHtml('about.p1')"></p>
+            <p [innerHTML]="safeHtml('about.p2')"></p>
+            <p [innerHTML]="safeHtml('about.p3')"> </p>
+            <p [innerHTML]="safeHtml('about.p4')"> </p>
+            <p [innerHTML]="safeHtml('about.p5')"></p>
+            <p class="pregunta" [innerHTML]="safeHtml('about.question')"></p>
+        </section>
+    </div>
+    <div class="skill">
+        <h2>{{ langService.translate('about.skills') }}</h2>
+        <div class="stack">
+            <section class="logos">
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/Angular.png" alt="Angular logo">
+                    <figcaption>ANGULAR</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/gsap_logo.png" alt="gsap logo">
+                    <figcaption>GSAP</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/javascript.png" alt="javaScript logo">
+                    <figcaption>JAVASCRIPT</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/css_logo.png" alt="css logo">
+                    <figcaption>CSS</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/html_logo.png" alt="html logo">
+                    <figcaption>HTML</figcaption>
+                </figure>
+            </section>
+            <h3>{{ langService.translate('about.frontend') }}</h3>
+        </div>
+
+        <div class="stack">
+            <section class="logos">
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/workbench_logo.png" alt="workbench logo">
+                    <figcaption>WORKBENCH</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/mysql_logo.png" alt="mysql logo">
+                    <figcaption>MYSQL</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/typescript_logo.png" alt="typescript logo">
+                    <figcaption>TYPESCRIPT</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/express_logo.png" alt="express logo">
+                    <figcaption>EXPRESS</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/node_logo.png" alt="nodes.js logo">
+                    <figcaption>NODES.JS</figcaption>
+                </figure>
+            </section>
+            <h3>{{ langService.translate('about.backend') }}</h3>
+        </div>
+
+        <div class="stack">
+            <section class="logos">
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/jira.png" alt="jira logo">
+                    <figcaption>JIRA</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/docker.png" alt="docker logo">
+                    <figcaption>DOCKER</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/figma_logo.png" alt="figma logo">
+                    <figcaption>FIGMA</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/git_logo.png" alt="git logo">
+                    <figcaption>GIT</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/github_logo.png" alt="github logo">
+                    <figcaption>GITHUB</figcaption>
+                </figure>
+            </section>
+            <h3>{{ langService.translate('about.tools') }}</h3>
+        </div>
+    </div>
+
+</div>

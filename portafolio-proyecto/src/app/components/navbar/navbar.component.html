@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="navbar-logo">
+    <img src="images/logo.png" alt="">
+    <a href="/">Kevin Pillaca</a>
+  </div>
+  
+  
+  <div class="nav">
+    <ul class="navbar-links" [class.open]="isMenuOpen">
+      <li><a href="/">{{ langService.translate('nav.home') }}</a></li>
+      <li><a [routerLink]="[]" fragment="acerca">{{ langService.translate('nav.about') }}</a></li>
+      <li><a [routerLink]="[]" fragment="projects">{{ langService.translate('nav.projects') }}</a></li>
+      <li><a [routerLink]="[]" fragment="contact">{{ langService.translate('nav.contact') }}</a></li>
+    </ul>
+    
+    <!--BOTÓN DE IDIOMA (DESPUÉS DEL UL) -->
+    <div class="lang-switch">
+      <button (click)="changeLang('es')" [class.active]="langService.lang === 'es'">ES</button>
+      <button (click)="changeLang('en')" [class.active]="langService.lang === 'en'">EN</button>
+    </div>
+    <!-- BOTÓN HAMBURGUESA / CERRAR -->
+    <div class="menu-toggle" (click)="toggleMenu()">
+      {{ isMenuOpen ? '✕' : '☰' }}
+    </div>
+  </div>
+</nav>
