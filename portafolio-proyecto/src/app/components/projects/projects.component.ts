@@ -11,13 +11,34 @@ export class ProjectsComponent {
 
   constructor(public langService: LanguageService) {}
 
-  imagenActiva: string | null = null;
+  imagenesApp: string[] = [
+  'images/proyectos/aplicacion_web.jpg',
+  'images/proyectos/bienvenido_aplicacion.jpg',
+  'images/proyectos/productos_aplicacion.jpg',
+  'images/proyectos/agregar_productos.jpg',
+  'images/proyectos/detalles_productos.jpg',
+  'images/proyectos/clientes_aplicacion.jpg'
+];
 
-  abrirImagen(src: string) {
-    this.imagenActiva = src;
-  }
+indiceActual: number = 0;
+modalAbierto: boolean = false;
 
-  cerrarImagen() {
-    this.imagenActiva = null;
-  }
+  abrirGaleria(indice: number = 0) {
+  this.indiceActual = indice;
+  this.modalAbierto = true;
+}
+
+siguiente() {
+  this.indiceActual =
+    (this.indiceActual + 1) % this.imagenesApp.length;
+}
+
+anterior() {
+  this.indiceActual =
+    (this.indiceActual - 1 + this.imagenesApp.length) % this.imagenesApp.length;
+}
+
+cerrarImagen() {
+  this.modalAbierto = false;
+}
 }

@@ -205,36 +205,61 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(37, 37, 37, 0.663);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.525);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .modal-img-contenido {
-  max-width: 85%;
-  max-height: 85%;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(53, 52, 52, 0.6);
-  animation: zoomIn 0.3s ease;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
 }
 
-@keyframes zoomIn {
-  from {
-    transform: scale(0.85);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.nav {
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 5%;
+}
+
+.next {
+  right: 5%;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.cerrar:hover {
+  color: #27FF9A;
 }
 
 /*responsive*/
 @media (max-width: 768px) {
+  .contenedor-principal{
+    padding: 0 15px;
+  }  
   .tarjeta {
     width: 100%;
     max-width: 380px;
@@ -242,9 +267,12 @@
     margin-bottom: 10px;
   }
   .tarjeta .img {
-    width: 340px;
+    width: 290px;
   }
   .proyect p{
     margin-bottom: 35px;
+  }
+  .tarjeta h3{
+    font-size: 20px;
   }
 }

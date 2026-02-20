@@ -1,13 +1,14 @@
 import { Component,AfterViewInit } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { gsap } from 'gsap';
+import { RouterLink } from '@angular/router';
 import SplitType from 'split-type';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [NavbarComponent,RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,AfterViewInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -6,6 +6,8 @@ import { ContactoService } from '../../services/contacto.service';
 import { Contacto } from '../../models/contacto.model';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-contact',
@@ -14,7 +16,7 @@ import { LanguageService } from '../../services/language.service';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit{
 
   contactoForm: FormGroup;
   mensaje = '';
@@ -54,4 +56,40 @@ export class ContactComponent {
       }
     });
   }
+
+  //Animacion Gsap
+
+  ngAfterViewInit(): void {
+
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // animacion(imagen)
+    gsap.from(".field", {
+    scrollTrigger: {
+      trigger: "#contact",
+      start: "top 80%",   
+      toggleActions: "restart none none reverse"
+    },
+    x: -100,
+    opacity: 0,
+    duration: 3.5,
+    stagger: 1.0,
+    ease: "power3.out"
+  });
+
+  gsap.from("#contact button", {
+    scrollTrigger: {
+      trigger: "#contact",
+      start: "top 80%",
+      toggleActions: "restart none none reverse"
+    },
+    x: 100,
+    opacity: 0,
+    duration: 3.5,
+    delay: 0.5,
+    ease: "power3.out"
+  });
+
+  }
+
 }

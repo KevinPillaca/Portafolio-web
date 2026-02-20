@@ -15,9 +15,9 @@
             <p>{{ langService.translate('projects.webDesc') }}</p>
             <div class="tecno"> <h3>HTLM</h3> <h3>CSS</h3> <h3>JAVASCRIPT</h3> <h3>GSAP</h3></div>
             <div class="botones">
-                <a href="#" class="boton-gris">
+                <a href="https://github.com/KevinPillaca/Sitio-Web-Imprenta" target="_blank" class="boton-gris">
                     <img src="/icons/hub_2.svg" alt="" class="icono"> Code</a>
-                <a href="#" class="boton-verde">
+                <a href="https://digimpresiones.com/" target="_blank" class="boton-verde">
                     <img src="/icons/demo.svg" alt="" class="icono"> Demo</a>
             </div>
         </div>
@@ -25,14 +25,14 @@
         <div class="tarjeta">
             <h2>{{ langService.translate('projects.appTitle') }}</h2>
             <span>{{ langService.translate('projects.inProgress') }}</span>
-            <img src="images/proyectos/aplicacion_web.jpg" class="img click" alt="foto Aplicación Web" (click)="abrirImagen('images/proyectos/aplicacion_web.jpg')">
+            <img src="images/proyectos/aplicacion_web.jpg" class="img click" alt="foto Aplicación Web" (click)="abrirGaleria(0)">
             <p>{{ langService.translate('projects.appDesc') }}</p>
             <div class="tecno"> <h3>ANGULAR</h3> <h3>NODE</h3> <h3>EXPRESS</h3> <h3>TYPESCRIPT</h3><h3>MYSQL</h3></div>
             <div class="botones">
-                <a href="#" class="boton-gris">
+                <a href="https://github.com/KevinPillaca/Gestion-imprenta-web" target="_blank" class="boton-gris">
                     <img src="/icons/hub_2.svg" alt="" class="icono"> Code</a>
-                <a href="#" class="boton-verde">
-                    <img src="/icons/demo.svg" alt="" class="icono">Demo</a>
+                <!--<a href="#" class="boton-verde">
+                    <img src="/icons/demo.svg" alt="" class="icono">Demo</a>-->
             </div>
         </div>
 
@@ -42,7 +42,7 @@
             <p>{{ langService.translate('projects.portfolioDesc') }}</p>
             <div class="tecno"> <h3>ANGULAR</h3> <h3>TYPESCRIPT</h3> <h3>GSAP</h3></div>
             <div class="botones">
-                <a href="#" class="boton-gris"> 
+                <a href="https://github.com/KevinPillaca/Portafolio-web" target="_blank" class="boton-gris"> 
                     <img src="/icons/hub_2.svg" alt="" class="icono">Code</a>
                 <a href="#" class="boton-verde">
                     <img src="/icons/demo.svg" alt="" class="icono">Demo</a>
@@ -58,12 +58,20 @@
     </svg>
 </div>
 
-@if (imagenActiva) {
+@if (modalAbierto) {
   <div class="modal-img" (click)="cerrarImagen()">
+
+    <button class="cerrar" (click)="cerrarImagen(); $event.stopPropagation()">✕</button>
+    
+    <button class="nav prev" (click)="anterior(); $event.stopPropagation()">❮</button>
+
     <img
-      [src]="imagenActiva"
+      [src]="imagenesApp[indiceActual]"
       class="modal-img-contenido"
       (click)="$event.stopPropagation()"
     />
+
+    <button class="nav next" (click)="siguiente(); $event.stopPropagation()">❯</button>
+
   </div>
 }

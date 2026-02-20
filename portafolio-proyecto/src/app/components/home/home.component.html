@@ -10,8 +10,8 @@
                 <h1 class="rol">{{ t('home.role') }}</h1>
 
                 <div class="buttons">
-                    <a href="#contacto" class="proyecto">{{ t('home.btnProject') }}</a>
-                    <a href="/cv_prueba.pdf" download class="curriculum" target="_blank">{{ t('home.btnCV') }}</a>
+                    <a [routerLink]="[]" fragment="contact"href="#contacto" class="proyecto">{{ t('home.btnProject') }}</a>
+                    <a href="/cv_KevinPillacaVentura.pdf" class="curriculum" target="_blank">{{ t('home.btnCV') }}</a>
                 </div>
             </div>
 

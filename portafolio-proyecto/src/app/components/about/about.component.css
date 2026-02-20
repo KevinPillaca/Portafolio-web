@@ -200,6 +200,7 @@ color: white;
     flex-direction: column-reverse;
     gap: 20px;
     margin-top: 20px;
+    padding: 0 25px;
   }
 
   .stack .logos {

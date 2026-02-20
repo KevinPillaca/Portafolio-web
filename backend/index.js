@@ -5,7 +5,7 @@ require('dotenv').config();
 const contactRoutes = require('./routes/contact.routes');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middlewares
 app.use(cors());
@@ -21,5 +21,5 @@ app.use('/api', contactRoutes);
 
 // Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });

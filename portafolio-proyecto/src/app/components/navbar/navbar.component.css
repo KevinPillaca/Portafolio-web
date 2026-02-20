@@ -85,11 +85,11 @@
     padding: 20px 25px;
   }
   .navbar-logo img {
-  width: 35px;
+  width: 30px;
   height: auto;
 }
   .navbar a {
-    font-size: 17px;
+    font-size: 16px;
   }
   .menu-toggle {
     display: block;
@@ -112,6 +112,18 @@
     display: flex;
     background-color: #1f3644db;
     z-index: 5;
+  }
+  .navbar .nav {
+    gap: 15px; 
+    display: flex;
+    align-items: center;
+  }
+  .lang-switch {
+    order: 1; 
+  }
+  .menu-toggle {
+    display: block;
+    order: 2;
   }
 }
 

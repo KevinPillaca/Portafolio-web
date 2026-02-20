@@ -140,7 +140,7 @@ color: white;
 
 /*responsive seccion de contacto*/
 @media (max-width: 768px) {
-
+  
   .formulario {
     width: 100%;
   }
@@ -160,8 +160,12 @@ color: white;
     width: 35px;
     height: auto;
   }
+  nav ul {
+    padding: 0 30px;
+    gap: 17px;
+  }
   .navbar-links a{
-    font-size: 16px;
+    font-size: 15px;
   }
   .contacto footer h1{
     font-size: 13px;
