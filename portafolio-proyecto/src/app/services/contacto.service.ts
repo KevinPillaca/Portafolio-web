@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ContactoService {
 
-  private apiUrl = 'http://localhost:3000/api/contacto';
+  private apiUrl = 'https://backend-web-cmyd.onrender.com/api/contacto';
 
   constructor(private http: HttpClient) {}
 

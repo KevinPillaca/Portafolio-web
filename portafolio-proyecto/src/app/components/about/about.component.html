@@ -2,7 +2,7 @@
     <h1> {{ langService.translate('about.title') }}</h1>
     <div class="img_des">
         <section class="imagen">
-            <img src="images/foto_jugador.jpg" alt="imagen mia" />
+            <img src="images/perfil.jpg" alt="imagen mia" />
         </section>
         <section class="descripcion">
             <p [innerHTML]="safeHtml('about.p1')"></p>
@@ -30,12 +30,16 @@
                     <figcaption>JAVASCRIPT</figcaption>
                 </figure>
                 <figure class="tecnologia">
-                    <img src="images/logo_tecnologias/css_logo.png" alt="css logo">
+                    <img src="images/logo_tecnologias/html_logo.png" alt="css logo">
+                    <figcaption>HTML</figcaption>
+                </figure>
+                <figure class="tecnologia">
+                    <img src="images/logo_tecnologias/css_logo.png" alt="html logo">
                     <figcaption>CSS</figcaption>
                 </figure>
                 <figure class="tecnologia">
-                    <img src="images/logo_tecnologias/html_logo.png" alt="html logo">
-                    <figcaption>HTML</figcaption>
+                    <img src="images/logo_tecnologias/scss_logo.png" alt="html logo">
+                    <figcaption>SCSS</figcaption>
                 </figure>
             </section>
             <h3>{{ langService.translate('about.frontend') }}</h3>

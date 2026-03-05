@@ -1,9 +1,6 @@
-import { Component,AfterViewInit  } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-import { ContactoService } from '../../services/contacto.service';
-import { Contacto } from '../../models/contacto.model';
 import { RouterLink } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 import { gsap } from 'gsap';
@@ -12,84 +9,75 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule,RouterLink],
+  imports: [CommonModule, RouterLink, FormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements AfterViewInit{
+export class ContactComponent implements AfterViewInit {
 
-  contactoForm: FormGroup;
-  mensaje = '';
-  error = '';
-  enviado = false;
-
-  constructor(
-    private fb: FormBuilder,
-    private contactoService: ContactoService,
-    public langService: LanguageService
-  ) {
-    this.contactoForm = this.fb.group({
-      nombre: ['', Validators.required],
-      correo: ['', [Validators.required, Validators.email]],
-      mensaje: ['', Validators.required]
-    });
-  }
-
-  enviar() {
-    if (this.contactoForm.invalid) {
-      this.contactoForm.markAllAsTouched();
-      return;
-    }
-
-    const data: Contacto = this.contactoForm.value;
-
-    this.contactoService.enviarContacto(data).subscribe({
-      next: (resp) => {
-        this.enviado = true;
-        this.mensaje = resp.message; // 👈 viene del BACKEND
-        this.error = '';
-        this.contactoForm.reset();
-      },
-      error: (err) => {
-        this.error = err.error?.message || 'Error al enviar el mensaje';
-        this.enviado = false;
-      }
-    });
-  }
-
-  //Animacion Gsap
+  constructor(public langService: LanguageService) {}
 
   ngAfterViewInit(): void {
-
     gsap.registerPlugin(ScrollTrigger);
-    
-    // animacion(imagen)
+
     gsap.from(".field", {
-    scrollTrigger: {
-      trigger: "#contact",
-      start: "top 80%",   
-      toggleActions: "restart none none reverse"
-    },
-    x: -100,
-    opacity: 0,
-    duration: 3.5,
-    stagger: 1.0,
-    ease: "power3.out"
-  });
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 80%",
+        toggleActions: "restart none none reverse"
+      },
+      x: -100,
+      opacity: 0,
+      duration: 3.5,
+      stagger: 1.0,
+      ease: "power3.out"
+    });
 
-  gsap.from("#contact button", {
-    scrollTrigger: {
-      trigger: "#contact",
-      start: "top 80%",
-      toggleActions: "restart none none reverse"
-    },
-    x: 100,
-    opacity: 0,
-    duration: 3.5,
-    delay: 0.5,
-    ease: "power3.out"
-  });
-
+    gsap.from("#contact button", {
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 80%",
+        toggleActions: "restart none none reverse"
+      },
+      x: 100,
+      opacity: 0,
+      duration: 3.5,
+      delay: 0.5,
+      ease: "power3.out"
+    });
   }
 
+  mensajeEstado: string = '';
+
+  submitForm(event: Event) {
+      event.preventDefault(); 
+      const form = event.target as HTMLFormElement;
+      // 1. Verificamos la validez del formulario
+      if (!form.checkValidity()) {
+        this.mensajeEstado = 'Por favor, completa todos los campos requeridos.';
+        form.reportValidity(); 
+        setTimeout(() => this.mensajeEstado = '', 5000);
+        return; 
+      }
+      
+      const data = new FormData(form);
+
+      fetch('https://formsubmit.co/ajax/kevinjosepillaca@gmail.com', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(res => res.json())
+      .then(res => {
+        this.mensajeEstado = 'Mensaje enviado correctamente';
+        form.reset();
+        //limpiar el mensaje después de 5 segundos
+        setTimeout(() => this.mensajeEstado = '', 5000);
+      })
+      .catch(err => {
+        console.error(err);
+        this.mensajeEstado = 'Hubo un error al enviar el mensaje';
+        setTimeout(() => this.mensajeEstado = '', 5000);
+      });
+  }
 }

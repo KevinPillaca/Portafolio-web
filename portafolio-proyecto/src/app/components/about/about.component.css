@@ -23,9 +23,13 @@ height: 700px;
     justify-content: center; 
     align-items: center;
 }
+
 .imagen img {
-width: 400px;
-height: auto;
+    width: 400px;
+    height: auto;
+    border-radius: 40%;
+    filter: grayscale(100%);  
+    transition: filter 0.3s ease;
 }
 
 .descripcion{
