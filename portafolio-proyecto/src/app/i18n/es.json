@@ -35,8 +35,11 @@
     "appDesc": "Aplicación web para solucionar la gestión manual de una imprenta gráfica, digitalizando el registro de clientes, cobranzas, productos y cotizaciones. La plataforma permite un mejor control del negocio mediante un sistema con login, base de datos y acceso centralizado desde la web.",
     "portfolioTitle": "Portafolio Web",
     "portfolioDesc": "Portafolio web personal desarrollado con Angular y TypeScript, con animaciones en GSAP y aplicación práctica de mis conocimientos en desarrollo web moderno, buenas prácticas de diseño y experiencia de usuario.",
+    "vetTitle": "Gestión Médica Veterinaria",
+    "vetDesc": "Digitalicé el flujo médico completo, permitiendo registrar citas y generar diagnósticos detallados con un solo clic. Implementé un historial inteligente con paginación avanzada para asegurar rapidez y orden en clínicas con alta demanda de pacientes.",
     "comingSoon": "Más proyectos próximamente..."
-    },
+  },
+    
     "contact": {
       "title": "Contacto",
       "name": "Nombre...",

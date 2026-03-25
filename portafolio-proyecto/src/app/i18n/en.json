@@ -35,6 +35,8 @@
     "appDesc": "Web application designed to replace manual management in a graphic printing business, digitizing client records, payments, products, and quotations. The platform provides better business control through a login system, database, and centralized web access.",
     "portfolioTitle": "Web Portfolio",
     "portfolioDesc": "Personal web portfolio developed with Angular and TypeScript, featuring GSAP animations and practical application of my knowledge in modern web development, design best practices, and user experience.",
+    "vetTitle": "Veterinary Medical Management",
+    "vetDesc": "I digitized the entire medical workflow, enabling appointment scheduling and detailed diagnostic generation with a single click. I implemented an intelligent history system with advanced pagination to ensure speed and organization for high-demand veterinary clinics.",
     "comingSoon": "More projects coming soon..."
   },
   "contact": {

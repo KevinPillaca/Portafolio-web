@@ -25,9 +25,9 @@
         <div class="tarjeta">
             <h2>{{ langService.translate('projects.appTitle') }}</h2>
             <span>{{ langService.translate('projects.inProgress') }}</span>
-            <img src="images/proyectos/aplicacion_web.jpg" class="img click" alt="foto Aplicación Web" (click)="abrirGaleria(0)">
+            <img src="images/proyectos/aplicacion_web.jpg" class="img click" (click)="abrirGaleria(imagenesApp, 0)">
             <p>{{ langService.translate('projects.appDesc') }}</p>
-            <div class="tecno"> <h3>ANGULAR</h3> <h3>NODE</h3> <h3>EXPRESS</h3> <h3>TYPESCRIPT</h3><h3>MYSQL</h3></div>
+            <div class="tecno"> <h3>ANGULAR</h3> <h3>NODE.JS</h3> <h3>EXPRESS</h3> <h3>TYPESCRIPT</h3><h3>MYSQL</h3></div>
             <div class="botones">
                 <a href="https://github.com/KevinPillaca/Gestion-imprenta-web" target="_blank" class="boton-gris">
                     <img src="/icons/hub_2.svg" alt="" class="icono"> Code</a>
@@ -49,6 +49,19 @@
             </div>
         </div>
 
+        <div class="tarjeta">
+            <h2>{{ langService.translate('projects.vetTitle') }}</h2>
+            <img src="images/proyectos/login.jpg" class="img click" (click)="abrirGaleria(imagenesVeterinaria, 0)">
+            <p>{{ langService.translate('projects.vetDesc') }}</p>
+            <div class="tecno"> <h3>REACT 19</h3> <h3>TYPESCRIPT</h3> <h3>Tailwind CSS</h3> <h3>NODE.JS</h3> <h3>EXPRESS</h3> <h3>PRISMA ORM</h3> <h3>MYSQL</h3></div>
+            <div class="botones">
+                <a href="https://github.com/KevinPillaca/API-Control-Mascotas-y-Citas" target="_blank" class="boton-gris"> 
+                    <img src="/icons/hub_2.svg" alt="" class="icono">Code</a>
+                <!--<a href="#" class="boton-verde">
+                    <img src="/icons/demo.svg" alt="" class="icono">Demo</a>-->
+            </div>
+        </div>
+
         <div class="tarjeta proxima">
             <h3> {{ langService.translate('projects.comingSoon') }}</h3>
         </div>
@@ -60,18 +73,16 @@
 
 @if (modalAbierto) {
   <div class="modal-img" (click)="cerrarImagen()">
-
     <button class="cerrar" (click)="cerrarImagen(); $event.stopPropagation()">✕</button>
     
     <button class="nav prev" (click)="anterior(); $event.stopPropagation()">❮</button>
 
-    <img
-      [src]="imagenesApp[indiceActual]"
-      class="modal-img-contenido"
-      (click)="$event.stopPropagation()"
-    />
+    <img [src]="galeriaActiva[indiceActual]" class="modal-img-contenido" (click)="$event.stopPropagation()" />
 
     <button class="nav next" (click)="siguiente(); $event.stopPropagation()">❯</button>
 
+    <div class="contador-fotos" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: white; background: rgba(0,0,0,0.6); padding: 6px 16px; border-radius: 25px; font-family: sans-serif; font-size: 14px; z-index: 10;">
+      {{ indiceActual + 1 }} / {{ galeriaActiva.length }}
+    </div>
   </div>
 }
