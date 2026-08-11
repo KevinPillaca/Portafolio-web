@@ -8,7 +8,7 @@
   "home": {
     "greeting": "HELLO",
     "iam": "I'm Kevin.",
-    "role": "Junior Full Stack Developer",
+    "role": "FullStack Developer",
     "btnProject": "I have a Project",
     "btnCV": "My Resume"
   },
@@ -23,6 +23,7 @@
     "skills": "Skills",
     "frontend": "Frontend Technologies",
     "backend": "Backend Technologies",
+    "bd":"Database Technologies",
     "tools": " Other Tools... "
   },
   "projects": {
@@ -37,6 +38,8 @@
     "portfolioDesc": "Personal web portfolio developed with Angular and TypeScript, featuring GSAP animations and practical application of my knowledge in modern web development, design best practices, and user experience.",
     "vetTitle": "Veterinary Medical Management",
     "vetDesc": "I digitized the entire medical workflow, enabling appointment scheduling and detailed diagnostic generation with a single click. I implemented an intelligent history system with advanced pagination to ensure speed and organization for high-demand veterinary clinics.",
+    "calcuTitle": "Tax Calculator (IGV / VAT)",
+    "calcuDesc": "A website designed to simplify real-time tax calculations (adding or breaking down IGV/VAT) for South American countries (Peru, Argentina, Chile, Colombia, etc.). It features automatic redirection based on user geolocation, a breakdown of the taxable base, and an information section on each country's tax regulations.",
     "comingSoon": "More projects coming soon..."
   },
   "contact": {

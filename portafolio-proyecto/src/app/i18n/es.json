@@ -8,7 +8,7 @@
   "home": {
     "greeting": "HOLA",
     "iam": "Soy Kevin.",
-    "role": "Desarrollador Full-Stack Junior",
+    "role": "Desarrollador FullStack",
     "btnProject": "Tengo un Proyecto",
     "btnCV": "Mi Curriculum"
   },
@@ -21,8 +21,9 @@
     "p5": "Cuando no estoy programando, disfruto del deporte, el fútbol ⚽ y pasar tiempo en familia, que es mi mayor motivación. Estoy listo para seguir creciendo profesionalmente, asumir nuevos retos y construir cosas increibles con código☕",
     "question": "¿Hablamos de código y construimos algo increíble?",
     "skills": "Skills",
-    "frontend": "Tecnologías / Frontend",
-    "backend": "Tecnologías / Backend",
+    "frontend": "Tecnologías Frontend",
+    "backend": "Tecnologías Backend",
+    "bd":"Tecnologías de Bases de Datos",
     "tools": "Otras herramientas..."
   },
     "projects": {
@@ -37,6 +38,8 @@
     "portfolioDesc": "Portafolio web personal desarrollado con Angular y TypeScript, con animaciones en GSAP y aplicación práctica de mis conocimientos en desarrollo web moderno, buenas prácticas de diseño y experiencia de usuario.",
     "vetTitle": "Gestión Médica Veterinaria",
     "vetDesc": "Digitalicé el flujo médico completo, permitiendo registrar citas y generar diagnósticos detallados con un solo clic. Implementé un historial inteligente con paginación avanzada para asegurar rapidez y orden en clínicas con alta demanda de pacientes.",
+    "calcuTitle": "Calculadora de Impuestos (IGV / IVA)",
+    "calcuDesc": "Sitio web diseñada para simplificar el cálculo de impuestos (agregar o desglosar IGV/IVA) en tiempo real para países de Sudamérica (Perú, Argentina, Chile, Colombia, etc.). Incluye redirección automática según la geolocalización del usuario, desglose de base imponible y sección informativa sobre la normativa fiscal de cada país.",
     "comingSoon": "Más proyectos próximamente..."
   },
     
